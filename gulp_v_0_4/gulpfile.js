@@ -77,7 +77,7 @@ function watchAllFile()
     watch(['app/images/**'], images);
 }
 
-function prodaction_v_1_0()
+function production_v_1_0()
 {
     return src(['app/**/*','!app/images/src/**','!app/sass/**'])
         .pipe(dest('dist/'));
@@ -90,4 +90,4 @@ exports.images       = images;
 exports.updateImages = updateImages;
 
 exports.default      = parallel( scripts, styles, images, browser_sync, watchAllFile );
-exports.prodaction   = series( scripts, styles, images, prodaction_v_1_0);
+exports.production   = series( scripts, styles, images, production_v_1_0);

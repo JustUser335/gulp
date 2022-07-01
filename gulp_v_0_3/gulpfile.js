@@ -19,10 +19,10 @@ gulp.task('default1',gulp.parallel('hello','log'));
 /*===============================================*/
 
 // gulp.task('build1',function () {
-//     return gulp.src(['template/**'],{dot: true,nodir: true}).pipe(gulp.dest('prodaction'));
+//     return gulp.src(['template/**'],{dot: true,nodir: true}).pipe(gulp.dest('production'));
 // })
 // gulp.task('build2', function () {
-//     return gulp.src('tmp/**').pipe(gulp.dest('prodaction/about'))
+//     return gulp.src('tmp/**').pipe(gulp.dest('production/about'))
 // })
 // gulp.task('def', gulp.parallel('build1','build2'))
 
@@ -40,7 +40,7 @@ gulp.task('default1',gulp.parallel('hello','log'));
 /*===============================================*/
 
 // gulp.task('build3',function () {
-//     return gulp.src(['template/*.html']).pipe(gulp.symlink('prodaction'));
+//     return gulp.src(['template/*.html']).pipe(gulp.symlink('production'));
 // })
 
 /*===============================================*/
@@ -58,6 +58,6 @@ gulp.task('build4',function () {
                 img_png(),
                 img_webp({quality: 50})
             ])
-        .pipe(gulp.dest('prodaction'));
+        .pipe(gulp.dest('production'));
 })
 
